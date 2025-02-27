@@ -1,7 +1,7 @@
 const Restaurant=()=>{
     return(
         <>
-            
+            <h1>All Restaurants</h1>
         
         </>
     )

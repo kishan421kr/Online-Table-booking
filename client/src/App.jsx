@@ -10,6 +10,7 @@ import SignUp from "./pages/signup";
 import Contact from "./pages/contact";
 import About from "./pages/about";
 import Restaurant from "./pages/Restarunts";
+import Protection from "./pages/protection";
 
 const App=()=>{
   return(
@@ -24,7 +25,7 @@ const App=()=>{
           <Route path="signup" element={<SignUp/>}/>
           <Route path="contact" element={<Contact/>}/>
           <Route path="about" element={<About/>}/>
-          <Route path="restarunt" element={<Restaurant/>}/>
+          <Route path="restarunt" element={<Protection Component={Restaurant}/>}/>
         </Route>
       </Routes>
       <Routes path="Dashboard" element={<Dashboard/>}>
