@@ -39,14 +39,15 @@ const coustomersignup=async(req,res)=>{
 }
 
 
-// const doctorHomeDisplay=async( req, res) =>{
-//     try {
-//          const Doctor= await DoctorModel.find();
-//          res.status(200).send(Doctor);
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+const Displaybookings=async( req, res) =>{
+    try {
+         const bookings= await bookingModel.find();
+         res.status(200).send(bookings);
+    } catch (error) {
+        console.log(error);
+        res.status(401).send({msg:"not found!!"})
+    }
+}
 
 
 const coustomerlogin =async(req, res)=>{
@@ -80,6 +81,6 @@ const coustomerlogin =async(req, res)=>{
 //   }
 
 module.exports ={
-    CoustomerBooking,coustomersignup,coustomerlogin
-    // doctorHomeDisplay,doctorLogin,doctorSearch
+    CoustomerBooking,coustomersignup,coustomerlogin,Displaybookings
+    
 }

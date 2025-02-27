@@ -27,7 +27,7 @@ const Login=()=>{
           localStorage.setItem("docid", response.data._id);
           
           toast.success("You are Succesfully login!");
-          navigate("Dashboard");
+          navigate("/Dashboard");
  
     } catch (error) {
         toast.error(error.response.data.msg);

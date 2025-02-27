@@ -4,13 +4,14 @@ import Home from "./pages/Home";
 
 import Search from "./pages/Search";
 
-import Dashboard from "./pages/Dashboard";
+import Dashboard from "./Dashboard";
 import Login from "./pages/Login";
 import SignUp from "./pages/signup";
 import Contact from "./pages/contact";
 import About from "./pages/about";
 import Restaurant from "./pages/Restarunts";
 import Protection from "./pages/protection";
+import TableBooking from "./dashboardPages/tablebookings";
 
 const App=()=>{
   return(
@@ -27,10 +28,16 @@ const App=()=>{
           <Route path="about" element={<About/>}/>
           <Route path="restarunt" element={<Protection Component={Restaurant}/>}/>
         </Route>
+
+        
       </Routes>
-      <Routes path="Dashboard" element={<Dashboard/>}>
+      <Routes>
+        <Route path="Dashboard" element={<Dashboard/>} >
           
+          <Route path="tablebooking" element={<TableBooking/>}/>
+        </Route>
       </Routes>
+      
     </BrowserRouter>
 
     </>

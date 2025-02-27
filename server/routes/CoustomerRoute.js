@@ -7,5 +7,5 @@ route.post("/booking", CoustomerController.CoustomerBooking);
 route.post("/coustomersignup", CoustomerController.coustomersignup);
 // route.post("/searchdoctor", doctorController.doctorSearch);
 route.post("/coustomerlogin", CoustomerController.coustomerlogin);
-
+route.get("/displaybookings",CoustomerController.Displaybookings)
 module.exports = route;

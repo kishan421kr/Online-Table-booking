@@ -1,4 +1,10 @@
 
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
 .navbar{
     background-color:rgb(255, 204, 0) ;
 }
@@ -37,7 +43,7 @@
 #loginheading{
     /* text-align: center; */
     margin: 20px 0px;
-    background-color: rgb(255 34 34);
+    background-color: rgb(255, 204, 0);
     width: fit-content;
     padding: 10px;
     border-radius: 20px;
@@ -48,7 +54,7 @@
 }
 #searchformandheading h1{
     text-align: center;
-    background-color: rgb(255 34 34);
+    background-color: rgb(255, 204, 0);
    
     margin: 10px 0px;
     padding: 10px 0px;
@@ -265,4 +271,74 @@ footer {
         padding: 12px 20px;
         font-size: 1rem;
     }
+}
+
+/* Dashboard CSS */
+
+#dashboardh1{
+    text-align: center;
+    background-color:rgb(255, 204, 0) ;
+    padding: 10px;
+}
+
+/* sideNavbar */
+
+#sidebar{
+    width: 100%;
+    /* background-color: #333; */
+    height: 90vh;
+    display: flex;
+    
+}
+#sidebarsection{
+    height: 100%;
+    width: 25%;
+    background-color: #0056b3;
+    /* text-align: center; */
+    padding: 40px 60px;
+    color: white;
+}
+#sidebarsection div{
+    /* background-color: #aaa; */
+    padding: 20px 10px;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
+#sidebarsection span{
+    margin-bottom: 10px;
+    font-size: 26px;
+    font-weight: 600;
+}
+#sidebarlink{
+    text-decoration: none;
+    color: #ccc;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#sidebarlink:hover{
+    background-color: #fff;
+    color: #0056b3;
+    
+}
+
+/* data showing section */
+
+#infoshowsection{
+    width: 100%;
+    text-align: center;
+    margin: 10px 40px;
+}
+
+/* tablebooking data */
+
+#bookedtable{
+    display: flex;
+    flex-direction: column;
+    
+}
+#bookedtable h1{
+    text-align: center;
 }
