@@ -47,11 +47,11 @@ const TopMenu=()=>{
     }
     return(
         <>
-           <Navbar className='navbar' data-bs-theme="dark">
+           <Navbar className='navbar' data-bs-theme="light">
         <Container>
-          <Navbar.Brand href="#home">Book Your Table</Navbar.Brand>
+          <Navbar.Brand href="#home">Book My Table</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link as={Link} to={'home'}>Home</Nav.Link>
+            <Nav.Link  as={Link} to={'home'}>Home</Nav.Link>
             <Nav.Link as={Link} to={'menu'}>Menu</Nav.Link>
             <Nav.Link as={Link} to={'about'}>About-us</Nav.Link>
             <Nav.Link href="#" onClick={handleShow}>Reservation</Nav.Link>
