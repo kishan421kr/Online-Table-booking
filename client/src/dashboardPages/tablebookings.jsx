@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import BASE_URL from "../config";
 import axios from "axios";
-
+import Table from 'react-bootstrap/Table';
 const TableBooking=()=>{
 
     const [data,setdata] = useState([]);
@@ -19,26 +19,46 @@ const TableBooking=()=>{
     }
     useEffect(()=>{
         loaddata();
-    })
+    },[])
+
+    let srno =0 ;
 
     return(
         <>
 
             <div id="bookedtable">
             <h1>Tables Booked</h1>
-            <table style={{border:"1px solid black"}}>
+            
+            <Table striped bordered hover size="sm">
                 <thead>
-                    <tr> {/* Added <tr> to define a row */}
-                    <th>Sr.No</th> {/* Use <th> for headers instead of <td> */}
-                    <th>Name</th>
-                    <th>Number</th>
-                    <th>Restaurant Name</th>
-                    <th>Email</th>
+                    <tr>
+                        <th>Sr.No</th> 
+                        <th>Name</th>
+                        <th>Mob.No.</th>
+                        <th>Restaurant Name</th>
+                        <th>Email</th>
                     </tr>
                 </thead>
                 <tbody>
+                {
+                        data.map((key)=>{
+                            srno++;
+                            return(
+                                <>
+                                    <tr>
+                                        <td>{srno}</td>
+                                        <td>{key.name}</td>
+                                        <td>{key.mobile}</td>
+                                        <td>{key.restaurant}</td>
+                                        <td>{key.email}</td>
+                                    </tr>
+                                </>
+                            )
+                        })
+                    }
                 </tbody>
-            </table>
+                
+            </Table>
             </div>
         </>
     )
