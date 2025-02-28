@@ -4,20 +4,22 @@ const SignupModel = require("../models/CoustomerSignup")
 
 const CoustomerBooking=async(req, res)=>{
     console.log(req.body);
-    
-    const {name, mobile,restaurant,email} = req.body; 
-    try {
-        const booking = await bookingModel.create({
-            name:name,
-            mobile:mobile,
-            restaurant:restaurant,
-            email:email
-        })
+    res.send("okk")
+    // const {name,guests, mobile,datetime,restaurant,email} = req.body; 
+    // try {
+    //     const booking = await bookingModel.create({
+    //         name:name,
+    //         mobile:mobile,
+    //         restaurant:restaurant,
+    //         email:email,
+    //         datetime:datetime,
+    //         guests:guests
+    //     })
 
-        res.status(201).send({msg:"Table Succesfully Booked!"});
-    } catch (error) {
-           res.status(400).send({msg:"Data base not Working"})
-    }
+    //     res.status(201).send({msg:"Table Succesfully Booked!"});
+    // } catch (error) {
+    //        res.status(400).send({msg:"Data base not Working"})
+    // }
 
 }
 

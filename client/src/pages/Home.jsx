@@ -68,8 +68,8 @@ const loadData=async()=>{
                         <img src={img2} alt="Delicious Food 2"/>
                         <img src={img3} alt="Delicious Food 3"/>
                     </div>
+                    
                 </div>
-                
                 <div id="btndiv">
                     <p>Experience exquisite dining with us. Reserve your table now and indulge in culinary delights.</p>
 
@@ -87,6 +87,8 @@ const loadData=async()=>{
 
                     </button>
                 </div>
+                
+                
             </div>
         </div>
 

@@ -36,8 +36,8 @@ const TopMenu=()=>{
         try {
             const response = await axios.post(api, input);
             console.log(response);
-            toast.success(response.data.msg);
-            setShow(false)
+            // toast.success(response.data.msg);
+            // setShow(false)
         } catch (error) {
             console.log(error);
         }
@@ -49,15 +49,15 @@ const TopMenu=()=>{
         <>
            <Navbar className='navbar' data-bs-theme="light">
         <Container>
-          <Navbar.Brand href="#home">Book My Table</Navbar.Brand>
+          <Navbar.Brand href="#home" id='logoname'>Book My Table</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link  as={Link} to={'home'}>Home</Nav.Link>
-            <Nav.Link as={Link} to={'menu'}>Menu</Nav.Link>
-            <Nav.Link as={Link} to={'about'}>About-us</Nav.Link>
-            <Nav.Link href="#" onClick={handleShow}>Reservation</Nav.Link>
+            <Nav.Link id='navbarlink' as={Link} to={'home'}>Home</Nav.Link>
+            <Nav.Link id='navbarlink' as={Link} to={'menu'}>Menu</Nav.Link>
+            <Nav.Link id='navbarlink' as={Link} to={'about'}>About-us</Nav.Link>
+            <Nav.Link id='navbarlink' href="#" onClick={handleShow}>Reservation</Nav.Link>
             {/* <Nav.Link as={Link} to={'reservation'}>Reservation</Nav.Link> */}
-            <Nav.Link as={Link} to={'contact'}>Contact</Nav.Link>
-            <Nav.Link as={Link} to={'login'}>Login/SignUp</Nav.Link>
+            <Nav.Link id='navbarlink' as={Link} to={'contact'}>Contact</Nav.Link>
+            <Nav.Link id='navbarlink' as={Link} to={'login'}>Login/SignUp</Nav.Link>
             
           </Nav>
         </Container>
@@ -85,12 +85,26 @@ const TopMenu=()=>{
           <option value="Manohar">Manohar</option>
           
     </Form.Select>
+    
       </Form.Group>
-     
+      
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Enter No. of Guests</Form.Label>
+        <Form.Control type="number" name="guests" onChange={handleInput}/>
+      </Form.Group>
+      
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Select Date and Time</Form.Label>
+        <Form.Control type="datetime-local" name="datetime" onChange={handleInput}/>
+      </Form.Group>
+      
+      
+      
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Enter Mobile no</Form.Label>
         <Form.Control type="text" name="mobile" onChange={handleInput}/>
       </Form.Group>
+      
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Enter email</Form.Label>
         <Form.Control type="email" name="email" onChange={handleInput} />
